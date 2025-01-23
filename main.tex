@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{lawNotes}
+\title{LawNotes}
+\author{tglenhab}
+\date{\vspace{-5ex}}
+
+\begin{document}
+
+\maketitle
+
+\section{Usage}
+\subsection{Inset Boxes}
+
+The package provides for three inset boxes --- a black/grey ``Note'' box, a blue box ``Quote'' box, and a red ``Warning'' box. Each takes two arguments, for the title and contents respectivley; the Note and Warning boxes can take an optional argument to change from the default titles.
+
+\begin{verbatim}
+    \noteBox{Title}{Content}
+    \noteBox[Different Note:]{Note 2}{Content}
+    \quoteBox{28 U.S.C. \S 1367(a)}{(a)Except as provided 
+    in subsections (b) and (c) or as expressly provided otherwise 
+    by Federal statute, in any civil action of which the district
+    courts have original jurisdiction, the district courts shall
+    have supplemental jurisdiction over all other claims that are
+    so related to claims in the action within such original
+    jurisdiction that they form part of the same case or controversy
+    under Article III of the United States Constitution. Such
+    supplemental jurisdiction shall include claims that involve the
+    joinder or intervention of additional parties.}
+    \warningBox{Title}{Content}
+\end{verbatim}
+
+\noteBox{Title}{Content}
+\noteBox[Different Note]{Note 2}{Content}
+\quoteBox{28 U.S.C. \S 1367(a)}{(a)Except as provided in subsections (b) and (c) or as expressly provided otherwise by Federal statute, in any civil action of which the district courts have original jurisdiction, the district courts shall have supplemental jurisdiction over all other claims that are so related to claims in the action within such original jurisdiction that they form part of the same case or controversy under Article III of the United States Constitution. Such supplemental jurisdiction shall include claims that involve the joinder or intervention of additional parties.}
+\warningBox{Title}{Content}
+
+\subsection{Case Briefs}
+
+Case Briefs are made through a 9-argument command:
+
+\begin{verbatim}
+    \caseBrief{Title}{page range}{Parties}{Procedural History}
+    {Facts}{Question Presented}{Holding}{Reasoning}{Other Notes}
+\end{verbatim}
+
+\noindent The ``Title'' will be automatically added to the table of contents. Within any of the sections, normal latex formatting (and the boxes defined above) should work
+
+
+
+
+\end{document}

@@ -1,0 +1,39 @@
+\usepackage{tcolorbox} 
+\usepackage{xltabular}
+\usepackage{xcolor}
+\usepackage{makecell}
+\usepackage{paracol}
+\usepackage{amsmath}
+\usepackage{listlbls}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumerate}
+\usepackage{enumitem}
+
+\setcounter{secnumdepth}{0}
+
+
+\newcommand{\noteBox}[3][Note]{ \begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=white!95!black, title=#1: #2] #3\end{tcolorbox} }
+
+\newcommand{\warningBox}[3][Warning]{ \begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=red!5!white,colframe=red!75!black, title=#1: #2] #3\end{tcolorbox} }
+
+\newcommand{\quoteBox}[2]{ \begin{tcolorbox}[width=\linewidth, sharp corners=all, colback=blue!5!white,colframe=blue!75!black, title=#1] #2\end{tcolorbox} }
+
+%\renewcommand{\arraystretch}{1.5}
+\newcommand{\caseBrief}[9]{
+\vspace{5mm}
+\columnratio{0.865}
+\addcontentsline{toc}{subsubsection}{#1}
+\begin{paracol}{2}[]
+\noindent\textbf{#1}\vspace{1mm}\switchcolumn \noindent\textit{#2} \switchcolumn*
+#3 \vspace{1mm}\switchcolumn \noindent\textbf{Parties} \switchcolumn*
+#4 \vspace{1mm}\switchcolumn \noindent\textbf{Procedural \\History} \switchcolumn*
+#5 \vspace{1mm}\switchcolumn \noindent\textbf{Facts} \switchcolumn*
+#6 \vspace{1mm}\switchcolumn \noindent\textbf{Questions \\Presented} \switchcolumn*
+#7 \vspace{1mm}\switchcolumn \noindent\textbf{Holding} \switchcolumn*
+#8 \vspace{1mm}\switchcolumn \noindent\textbf{Reasoning} \switchcolumn*
+#9 \switchcolumn \noindent\textbf{Other Notes}
+\end{paracol}
+}
+
+
+\newcommand{\wrt}{\textsc{wrt}\ }
